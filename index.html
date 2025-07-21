@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You Mr Ward!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700|Pacifico|Roboto:400,700|Indie+Flower|Bangers|Montserrat:700|Lobster|Press+Start+2P|Quicksand:700|Caveat:700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Thank You, Mr Ward!</h1>
+        <button id="theme-toggle">🌙 Theme</button>
+        <button id="music-toggle">🎵 Music</button>
+    </header>
+    <main>
+        <section class="card" id="thankyou-card">
+            <h2>From Jesse Page</h2>
+            <p>
+                Thank you for being the best Year 6 teacher ever!<br>
+                You always put our safety first, then our happiness, then our education.<br>
+                You never shout, you always make us laugh, and you inspire me to be my best.<br>
+                I really appreciate everything you’ve done for me.<br>
+                I love having you as my teacher and friend!
+            </p>
+            <button id="confetti-btn">🎉 Celebrate!</button>
+        </section>
+        <section id="quiz-section" class="card"></section>
+        <section id="gallery-section" class="card"></section>
+        <section id="messages-section" class="card"></section>
+    </main>
+    <canvas id="confetti-canvas"></canvas>
+    <audio id="bg-music" src="song1.mp3" loop></audio>
+    <script src="confetti.js"></script>
+    <script src="quiz.js"></script>
+    <script src="gallery.js"></script>
+    <script src="messages.js"></script>
+    <script src="app.js"></script>
+    <!-- ...existing code... -->
+<div id="music-modal-bg" class="modal-bg" style="display:none;">
+  <div id="music-modal" class="modal">
+    <h2>Music Settings</h2>
+    <div>
+      <label>
+        <input type="checkbox" id="music-onoff">
+        Music On
+      </label>
+    </div>
+    <div>
+      <label for="music-select">Choose a song:</label>
+      <select id="music-select">
+        <option value="Mr Ward Present 1.wav">Eclipse - Dance</option>
+        <option value="Ocean.wav">Ocean - Chill Out</option>
+        <option value="Shadows.wav">Shadows - Adrenaline</option>
+      </select>
+    </div>
+    <div>
+      <label for="music-volume">Volume:</label>
+      <input type="range" id="music-volume" min="0" max="1" step="0.01" value="0.5">
+    </div>
+    <button id="music-close">Close</button>
+  </div>
+</div>
+<!-- ...existing code... -->
+ <script src="music.js"></script>
+ <script src="themes.js"></script>
+ <!-- Add this after your theme button in <header> -->
+<select id="theme-select">
+  <option value="classic">Classic</option>
+  <option value="dark">Dark</option>
+  <option value="neon">Neon</option>
+  <option value="disco">Disco</option>
+  <option value="ocean">Ocean</option>
+  <option value="sunset">Sunset</option>
+  <option value="forest">Forest</option>
+  <option value="space">Space</option>
+  <option value="pastel">Pastel</option>
+  <option value="fire">Fire</option>
+  <option value="ice">Ice</option>
+  <option value="rainbow">Rainbow</option>
+  <option value="lemon">Lemon</option>
+  <option value="rose">Rose</option>
+  <option value="mint">Mint</option>
+  <option value="grape">Grape</option>
+  <option value="peach">Peach</option>
+  <option value="sky">Sky</option>
+  <option value="sand">Sand</option>
+</select>
+<!-- Theme Popup Modal -->
+<div id="theme-modal-bg" class="modal-bg" style="display:none;">
+  <div id="theme-modal" class="modal">
+    <h2>Choose a Theme</h2>
+    <div id="theme-list"></div>
+    <button id="theme-close">Close</button>
+  </div>
+</div>
+</body>
+</html>

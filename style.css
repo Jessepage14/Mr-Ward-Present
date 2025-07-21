@@ -1,0 +1,264 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: background 0.5s, color 0.5s;
+}
+header {
+    background: #2e8b57;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: inline-block;
+    padding: 30px 40px;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 90%;
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #2e8b57;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #246b45;
+}
+#confetti-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: 1000;
+}
+.dark-mode {
+    background: #222;
+    color: #eee;
+}
+.dark-mode header {
+    background: #111;
+}
+.dark-mode .card {
+    background: #333;
+    color: #eee;
+}
+input, textarea {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    width: 90%;
+    max-width: 400px;
+}
+.quiz-question {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.quiz-option {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+.gallery-img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    margin: 8px;
+    border-radius: 8px;
+    border: 2px solid #2e8b57;
+}
+.message {
+    background: #f0f8ff;
+    color: #222;
+    border-radius: 8px;
+    margin: 8px auto;
+    padding: 10px;
+    max-width: 400px;
+    text-align: left;
+}
+.dark-mode .message {
+    background: #444;
+    color: #eee;
+}
+/* ...existing code... */
+.modal-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+.modal {
+    background: #fff;
+    color: #222;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    min-width: 300px;
+    max-width: 90vw;
+    text-align: left;
+}
+.dark-mode .modal {
+    background: #222;
+    color: #eee;
+}
+/* Classic */
+body.classic { background: #f0f8ff; color: #222; font-family: 'Roboto', Arial, sans-serif; }
+header.classic { background: #2e8b57; color: #fff; }
+.card.classic, .modal.classic { background: #fff; color: #222; }
+button.classic { background: #2e8b57; color: #fff; }
+
+/* Dark */
+body.dark { background: #181a1b; color: #eee; font-family: 'Montserrat', Arial, sans-serif; }
+header.dark { background: #111; color: #eee; }
+.card.dark, .modal.dark { background: #222; color: #eee; }
+button.dark { background: #444; color: #eee; }
+
+/* Neon */
+body.neon { background: #0f0f0f; color: #39ff14; font-family: 'Orbitron', Arial, sans-serif; }
+header.neon { background: #ff00cc; color: #fff; text-shadow: 0 0 10px #39ff14; }
+.card.neon, .modal.neon { background: #222; color: #39ff14; border: 2px solid #ff00cc; }
+button.neon { background: #39ff14; color: #0f0f0f; text-shadow: 0 0 5px #ff00cc; }
+
+/* Disco */
+body.disco { background: url("Disco.jpg") center/cover fixed; color: #fff; font-family: 'Bangers', cursive; }
+header.disco { background: #3333ff; color: #ffeb3b; }
+.card.disco, .modal.disco { background: rgba(255,255,255,0.8); color: #3333ff; border: 2px dashed #ff00cc; }
+button.disco { background: #ff00cc; color: #fff; }
+
+/* Ocean */
+body.ocean { background: url("Ocean.jpg") center/cover fixed; color: #003366; font-family: 'Quicksand', Arial, sans-serif; }
+header.ocean { background: #0077be; color: #fff; }
+.card.ocean, .modal.ocean { background: #e0f7fa; color: #003366; }
+button.ocean { background: #0077be; color: #fff; }
+
+/* Sunset */
+body.sunset { background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); color: #7f2f00; font-family: 'Pacifico', cursive; }
+header.sunset { background: #ff7e5f; color: #fff; }
+.card.sunset, .modal.sunset { background: #fff0e6; color: #7f2f00; }
+button.sunset { background: #ff7e5f; color: #fff; }
+
+/* Forest */
+body.forest { background: url("forest-trees.jpg") center/cover fixed; color: #145a32; font-family: 'Caveat', cursive; }
+header.forest { background: #145a32; color: #fff; }
+.card.forest, .modal.forest { background: #e9f7ef; color: #145a32; }
+button.forest { background: #27ae60; color: #fff; }
+
+/* Space */
+body.space { background: url("space.jpg") center/cover fixed; color: #fff; font-family: 'Press Start 2P', cursive; }
+header.space { background: #222; color: #fff; }
+.card.space, .modal.space { background: rgba(0,0,0,0.8); color: #fff; border: 2px solid #fff; }
+button.space { background: #6c3483; color: #fff; }
+
+/* Pastel */
+body.pastel { background: #ffe0f7; color: #7f8c8d; font-family: 'Indie Flower', cursive; }
+header.pastel { background: #f7cac9; color: #fff; }
+.card.pastel, .modal.pastel { background: #fff; color: #7f8c8d; }
+button.pastel { background: #f7cac9; color: #fff; }
+
+/* Fire */
+body.fire { background: linear-gradient(135deg, #ff512f 0%, #dd2476 100%); color: #fff; font-family: 'Lobster', cursive; }
+header.fire { background: #dd2476; color: #fff; }
+.card.fire, .modal.fire { background: #fff3e0; color: #dd2476; }
+button.fire { background: #ff512f; color: #fff; }
+
+/* Ice */
+body.ice { background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); color: #0277bd; font-family: 'Montserrat', Arial, sans-serif; }
+header.ice { background: #0277bd; color: #fff; }
+.card.ice, .modal.ice { background: #e0f7fa; color: #0277bd; }
+button.ice { background: #81d4fa; color: #0277bd; }
+
+/* Rainbow */
+body.rainbow { background: linear-gradient(90deg, #ff0000 0%, #ff9900 20%, #33cc33 40%, #3399ff 60%, #9900cc 80%, #ff00cc 100%); color: #fff; font-family: 'Bangers', cursive; }
+header.rainbow { background: #ff00cc; color: #fff; }
+.card.rainbow, .modal.rainbow { background: #fff; color: #ff00cc; border: 2px solid #ff00cc; }
+button.rainbow { background: #ff00cc; color: #fff; }
+
+/* Lemon */
+body.lemon { background: #fffde4; color: #f7ca18; font-family: 'Quicksand', Arial, sans-serif; }
+header.lemon { background: #f7ca18; color: #fff; }
+.card.lemon, .modal.lemon { background: #fff; color: #f7ca18; }
+button.lemon { background: #f7ca18; color: #fff; }
+
+/* Rose */
+body.rose { background: #ffe4e1; color: #c2185b; font-family: 'Pacifico', cursive; }
+header.rose { background: #c2185b; color: #fff; }
+.card.rose, .modal.rose { background: #fff; color: #c2185b; }
+button.rose { background: #c2185b; color: #fff; }
+
+/* Mint */
+body.mint { background: #e0fff4; color: #009688; font-family: 'Montserrat', Arial, sans-serif; }
+header.mint { background: #009688; color: #fff; }
+.card.mint, .modal.mint { background: #fff; color: #009688; }
+button.mint { background: #009688; color: #fff; }
+
+/* Grape */
+body.grape { background: #f3e5f5; color: #6a1b9a; font-family: 'Lobster', cursive; }
+header.grape { background: #6a1b9a; color: #fff; }
+.card.grape, .modal.grape { background: #fff; color: #6a1b9a; }
+button.grape { background: #6a1b9a; color: #fff; }
+
+/* Peach */
+body.peach { background: #ffe5b4; color: #ff7043; font-family: 'Pacifico', cursive; }
+header.peach { background: #ff7043; color: #fff; }
+.card.peach, .modal.peach { background: #fff; color: #ff7043; }
+button.peach { background: #ff7043; color: #fff; }
+
+/* Sky */
+body.sky { background: #e3f2fd; color: #1976d2; font-family: 'Quicksand', Arial, sans-serif; }
+header.sky { background: #1976d2; color: #fff; }
+.card.sky, .modal.sky { background: #fff; color: #1976d2; }
+button.sky { background: #1976d2; color: #fff; }
+
+/* Sand */
+body.sand { background: #fff8e1; color: #a1887f; font-family: 'Caveat', cursive; }
+header.sand { background: #a1887f; color: #fff; }
+.card.sand, .modal.sand { background: #fff; color: #a1887f; }
+button.sand { background: #a1887f; color: #fff; }
+
+.theme-option {
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #f0f0f0;
+    transition: background 0.2s;
+}
+.theme-option:hover {
+    background: #d0f0ff;
+}
+.dark-mode .theme-option {
+    background: #222;
+    color: #eee;
+}
+.dark-mode .theme-option:hover {
+    background: #444;
+}
+
+/* Make the quiz section scrollable if content is tall */
+#quiz-section {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Make the theme list in the popup scrollable */
+#theme-list {
+    max-height: 350px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
